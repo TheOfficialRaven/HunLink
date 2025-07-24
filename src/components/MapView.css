@@ -1,0 +1,438 @@
+/* MapView.css - Modern, letisztult, pasztellzöld, mobilbarát stílusok */
+
+.map-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.map-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background: var(--white);
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 16px rgba(34, 66, 54, 0.04);
+  border: 1px solid var(--gray);
+}
+
+.map-header h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0 0 0.75rem 0;
+  letter-spacing: -0.02em;
+}
+
+.map-header p {
+  color: #3a4d39;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Loading állapot */
+.map-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  text-align: center;
+  background: var(--white);
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 16px rgba(34, 66, 54, 0.04);
+  margin: 2rem 0;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid var(--gray);
+  border-top: 4px solid var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1.5rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.map-loading p {
+  color: #3a4d39;
+  font-size: 1.1rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Info Window stílusok */
+.info-window {
+  padding: 1rem;
+  max-width: 280px;
+  background: var(--white);
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(34, 66, 54, 0.12);
+}
+
+.info-window h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 0.75rem 0;
+  line-height: 1.3;
+}
+
+.info-window .category {
+  display: inline-block;
+  background: var(--primary);
+  color: var(--white);
+  padding: 0.4rem 0.8rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0 0 0.75rem 0;
+  box-shadow: 0 2px 8px rgba(34, 66, 54, 0.06);
+}
+
+.info-window .city {
+  color: var(--text);
+  font-size: 0.9rem;
+  margin: 0 0 0.75rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.info-window .description {
+  color: #3a4d39;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin: 0 0 1rem 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.info-window .website-link {
+  display: inline-block;
+  background: var(--primary);
+  color: var(--white);
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(34, 66, 54, 0.06);
+}
+
+.info-window .website-link:hover {
+  background: #5bbf3a;
+  box-shadow: 0 4px 16px rgba(34, 66, 54, 0.10);
+}
+
+/* Nincs szolgáltató állapot */
+.no-providers {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--white);
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 16px rgba(34, 66, 54, 0.04);
+  margin: 2rem 0;
+  border: 1px solid var(--gray);
+}
+
+.no-providers p {
+  color: var(--text);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem 0;
+}
+
+.no-providers .subtitle {
+  color: #3a4d39;
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Ideiglenes térkép komponens */
+.temporary-map {
+  background: var(--white);
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 16px rgba(34, 66, 54, 0.08);
+  margin: 2rem 0;
+  overflow: hidden;
+  border: 1px solid var(--gray);
+}
+
+.map-placeholder {
+  padding: 3rem 2rem;
+  text-align: center;
+  background: var(--primary-light);
+}
+
+.map-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.map-placeholder h3 {
+  font-size: 1.5rem;
+  color: var(--text);
+  margin: 0 0 1rem 0;
+  font-weight: 700;
+}
+
+.map-placeholder p {
+  color: #3a4d39;
+  margin: 0 0 2rem 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.api-key-info {
+  background: var(--white);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-top: 2rem;
+  text-align: left;
+  max-width: 500px;
+  margin: 2rem auto 0;
+  box-shadow: 0 4px 16px rgba(34, 66, 54, 0.04);
+  border: 1px solid var(--gray);
+}
+
+.api-key-info p {
+  margin: 0 0 1rem 0;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.api-key-info ol {
+  margin: 0;
+  padding-left: 1.5rem;
+  color: #3a4d39;
+}
+
+.api-key-info li {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+/* Szolgáltatók lista */
+.providers-list {
+  margin-top: 2rem;
+}
+
+.providers-list h3 {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin: 0 0 2rem 0;
+  text-align: center;
+  font-weight: 700;
+}
+
+.providers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.provider-item {
+  background: var(--white);
+  border-radius: 1.25rem;
+  padding: 2rem;
+  box-shadow: 0 4px 16px rgba(34, 66, 54, 0.08);
+  border: 1px solid var(--gray);
+  transition: all 0.3s ease;
+}
+
+.provider-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(34, 66, 54, 0.12);
+}
+
+.provider-item h4 {
+  font-size: 1.25rem;
+  color: var(--text);
+  margin: 0 0 0.75rem 0;
+  font-weight: 700;
+}
+
+.provider-item .category-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.provider-item .category {
+  display: inline-block;
+  background: var(--primary);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  align-self: flex-start;
+  box-shadow: 0 2px 8px rgba(34, 66, 54, 0.06);
+}
+
+.provider-item .subcategory {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--text);
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  align-self: flex-start;
+  border: 1px solid var(--primary);
+}
+
+.provider-item .location {
+  color: var(--text);
+  font-size: 0.9rem;
+  margin: 0 0 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  padding: 0.75rem;
+  background: var(--primary-light);
+  border-radius: 0.75rem;
+}
+
+.provider-item .description {
+  color: #3a4d39;
+  line-height: 1.6;
+  margin: 0 0 1.25rem 0;
+  font-size: 0.95rem;
+}
+
+.provider-item .website-link {
+  display: inline-block;
+  background: var(--primary);
+  color: var(--white);
+  text-decoration: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(34, 66, 54, 0.06);
+}
+
+.provider-item .website-link:hover {
+  background: #5bbf3a;
+  box-shadow: 0 4px 16px rgba(34, 66, 54, 0.10);
+}
+
+/* Reszponzív dizájn */
+@media (max-width: 768px) {
+  .map-container {
+    padding: 0.5rem;
+  }
+  
+  .map-header {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 1.25rem;
+  }
+  
+  .map-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .map-header p {
+    font-size: 0.9rem;
+  }
+  
+  .info-window {
+    max-width: 240px;
+  }
+  
+  .info-window h3 {
+    font-size: 1rem;
+  }
+  
+  .info-window .description {
+    font-size: 0.8rem;
+  }
+  
+  .providers-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  
+  .provider-item {
+    padding: 1.5rem;
+    border-radius: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .map-header h2 {
+    font-size: 1.25rem;
+  }
+  
+  .info-window {
+    max-width: 200px;
+  }
+  
+  .info-window h3 {
+    font-size: 0.9rem;
+  }
+  
+  .info-window .category {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
+  }
+  
+  .info-window .city {
+    font-size: 0.8rem;
+  }
+  
+  .info-window .description {
+    font-size: 0.75rem;
+  }
+  
+  .info-window .website-link {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.8rem;
+  }
+  
+  .provider-item {
+    padding: 1.25rem;
+  }
+}
+
+/* Térkép konténer magasság reszponzív */
+@media (max-height: 600px) {
+  .map-container {
+    padding: 0.5rem;
+  }
+  
+  .map-header {
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+  
+  .map-header h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .map-header p {
+    font-size: 0.85rem;
+  }
+} 

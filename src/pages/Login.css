@@ -1,0 +1,121 @@
+/* Login.css - Modern, letisztult, pasztellzöld, mobilbarát stílusok */
+
+.login-container {
+  max-width: 28rem;
+  margin: 2.5rem auto 0;
+  padding: 0 1rem;
+}
+
+.login-card {
+  background: var(--white);
+  border-radius: 2rem;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 4px 16px rgba(34, 66, 54, 0.08);
+  border: 1px solid var(--gray);
+}
+
+.login-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--primary);
+  letter-spacing: -0.02em;
+}
+
+.error-message {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: var(--danger);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  border: 2px solid var(--gray);
+  border-radius: 1rem;
+  outline: none;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background: var(--white);
+  color: var(--text);
+}
+
+.form-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(126, 217, 87, 0.1);
+}
+
+.form-input::placeholder {
+  color: #9ca3af;
+}
+
+.login-button {
+  background: var(--primary);
+  color: var(--white);
+  padding: 1rem 2rem;
+  border-radius: 1.5rem;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(34, 66, 54, 0.06);
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.login-button:hover {
+  background: #5bbf3a;
+  box-shadow: 0 4px 16px rgba(34, 66, 54, 0.10);
+}
+
+.login-button:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    margin: 1.5rem auto 0;
+    padding: 0 0.5rem;
+  }
+  
+  .login-card {
+    padding: 2rem 1.5rem;
+    border-radius: 1.5rem;
+  }
+  
+  .login-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-input {
+    padding: 0.875rem 1rem;
+  }
+} 

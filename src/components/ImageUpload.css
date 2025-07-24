@@ -1,0 +1,205 @@
+.image-upload-container {
+  margin-bottom: 1.5rem;
+}
+
+/* Hibaüzenet stílusok */
+.upload-error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.upload-error p {
+  margin: 0;
+  color: #dc2626;
+  font-weight: 500;
+}
+
+.error-close-btn {
+  background: none;
+  border: none;
+  color: #dc2626;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s ease;
+}
+
+.error-close-btn:hover {
+  background: rgba(220, 38, 38, 0.1);
+}
+
+.image-upload-area {
+  border: 2px dashed var(--gray);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  text-align: center;
+  background: var(--white);
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.image-upload-area:hover {
+  border-color: var(--primary);
+  background: var(--light-green);
+}
+
+.image-upload-area.uploading {
+  border-color: var(--primary);
+  background: var(--light-green);
+  cursor: not-allowed;
+}
+
+.file-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.file-input:disabled {
+  cursor: not-allowed;
+}
+
+.upload-content {
+  pointer-events: none;
+}
+
+.upload-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--gray);
+}
+
+.upload-content p {
+  margin: 0.5rem 0;
+  color: var(--text);
+}
+
+.upload-hint {
+  font-size: 0.875rem;
+  color: var(--gray) !important;
+}
+
+.upload-warning {
+  font-size: 0.875rem;
+  color: #f59e0b !important;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.upload-progress {
+  pointer-events: none;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 0.5rem;
+  background: var(--gray);
+  border-radius: 0.25rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--primary);
+  transition: width 0.3s ease;
+}
+
+.uploaded-images {
+  margin-top: 1.5rem;
+}
+
+.uploaded-images h4 {
+  margin-bottom: 1rem;
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.images-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.image-item {
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.image-item:hover {
+  transform: translateY(-2px);
+}
+
+.uploaded-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+}
+
+.delete-image-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: rgba(255, 0, 0, 0.8);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.delete-image-btn:hover {
+  background: rgba(255, 0, 0, 1);
+  transform: scale(1.1);
+}
+
+/* Reszponzív design */
+@media (max-width: 768px) {
+  .image-upload-area {
+    padding: 1.5rem;
+  }
+  
+  .upload-icon {
+    font-size: 2.5rem;
+  }
+  
+  .images-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0.75rem;
+  }
+  
+  .uploaded-image {
+    height: 120px;
+  }
+  
+  .upload-error {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+} 

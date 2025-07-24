@@ -1,0 +1,123 @@
+body {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  color: #234236;
+  background-color: #F7FAF7;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary: #7ed957;
+  --primary-light: #eafbe6;
+  --accent: #b6e5c3;
+  --danger: #ef4444;
+  --gray: #f3f4f6;
+  --text: #234236;
+  --white: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text);
+  font-family: inherit;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+p {
+  color: #3a4d39;
+  line-height: 1.7;
+  margin-bottom: 1.5em;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #5bbf3a;
+}
+
+.navbar {
+  background: var(--white);
+  box-shadow: 0 2px 8px rgba(34, 66, 54, 0.06);
+  padding: 1.2rem 2rem;
+  border-radius: 1.5rem;
+  margin: 1.5rem auto 2.5rem auto;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.main-content {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  background: var(--primary-light);
+  border-radius: 2rem;
+  margin: 0 auto 2rem auto;
+  max-width: 900px;
+  box-shadow: 0 4px 16px rgba(34, 66, 54, 0.04);
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.card {
+  max-width: 28rem;
+  margin: 2rem auto;
+  background-color: var(--white);
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 16px rgba(34, 66, 54, 0.08);
+  padding: 2.5rem 2rem;
+  border: 1px solid var(--gray);
+}
+
+.button {
+  display: inline-block;
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 0.85rem 2rem;
+  border-radius: 1.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  box-shadow: 0 2px 8px rgba(34, 66, 54, 0.06);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.button:hover {
+  background-color: #5bbf3a;
+  box-shadow: 0 4px 16px rgba(34, 66, 54, 0.10);
+}
+
+.button-secondary {
+  background-color: var(--accent);
+  color: var(--text);
+  border: 1px solid var(--primary);
+}
+.button-secondary:hover {
+  background-color: #d2f5c9;
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem 0.5rem;
+    border-radius: 0.75rem;
+  }
+  .main-content {
+    padding: 1.2rem 0.5rem;
+    border-radius: 1rem;
+  }
+  .card {
+    padding: 1.2rem 0.5rem;
+    border-radius: 1rem;
+  }
+}

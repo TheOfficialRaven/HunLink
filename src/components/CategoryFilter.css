@@ -1,0 +1,183 @@
+/* CategoryFilter.css - Modern, letisztult, pasztellzöld, mobilbarát stílusok a képen látható layout alapján */
+
+.category-filter {
+  margin-bottom: 2rem;
+}
+
+.category-filter-container {
+  background: var(--white);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 4px 16px rgba(34, 66, 54, 0.08);
+  border: 1px solid var(--gray);
+}
+
+/* Szűrő szekciók */
+.filter-section {
+  margin-bottom: 2rem;
+}
+
+.filter-section:last-child {
+  margin-bottom: 0;
+}
+
+.filter-section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--gray);
+}
+
+.filter-icon {
+  font-size: 1.25rem;
+  color: var(--primary);
+}
+
+.filter-section-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+/* Szűrő lista */
+.filter-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.filter-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+  transition: background 0.2s;
+}
+
+.filter-item:hover {
+  background: var(--primary-light);
+}
+
+.filter-checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary);
+  cursor: pointer;
+}
+
+.filter-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  font-size: 0.95rem;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.filter-name {
+  flex: 1;
+}
+
+.filter-count {
+  color: #3a4d39;
+  font-size: 0.875rem;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+/* Vissza gomb */
+.back-button {
+  background: var(--primary-light);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  padding: 0.75rem 1.25rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 1rem;
+  width: 100%;
+  text-align: left;
+}
+
+.back-button:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+/* Alkategória lista */
+.subcategory-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Reszponzív dizájn */
+@media (max-width: 768px) {
+  .category-filter-container {
+    padding: 1.5rem;
+    border-radius: 1.25rem;
+  }
+  
+  .filter-section-header {
+    margin-bottom: 1.25rem;
+  }
+  
+  .filter-section-title {
+    font-size: 1rem;
+  }
+  
+  .filter-item {
+    padding: 0.4rem;
+  }
+  
+  .filter-label {
+    font-size: 0.9rem;
+  }
+  
+  .filter-count {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .category-filter-container {
+    padding: 1.25rem;
+    border-radius: 1rem;
+  }
+  
+  .filter-section {
+    margin-bottom: 1.5rem;
+  }
+  
+  .filter-section-header {
+    margin-bottom: 1rem;
+  }
+  
+  .filter-icon {
+    font-size: 1.125rem;
+  }
+  
+  .filter-section-title {
+    font-size: 0.95rem;
+  }
+  
+  .filter-item {
+    padding: 0.3rem;
+  }
+  
+  .filter-label {
+    font-size: 0.85rem;
+  }
+  
+  .filter-count {
+    font-size: 0.75rem;
+  }
+} 

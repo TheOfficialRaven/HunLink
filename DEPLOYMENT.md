@@ -15,7 +15,7 @@
    - Válaszd ki a HunLink repository-t
 
 2. **Build beállítások**
-   - **Build command**: `npm run build`
+   - **Build command**: `npm install && npm run build`
    - **Publish directory**: `dist`
    - **Node version**: 18 (vagy újabb)
 
@@ -31,6 +31,7 @@
 A projekt tartalmazza a következő Netlify konfigurációs fájlokat:
 - `netlify.toml` - Build beállítások
 - `public/_redirects` - React Router útvonalak kezelése
+- `.npmrc` - NPM konfiguráció
 
 ### Hibaelhárítás
 
@@ -54,8 +55,19 @@ Ha a deployment sikertelen:
 
 4. **Cache törlése**:
    ```bash
-   npm run build -- --force
+   Remove-Item -Recurse -Force node_modules, package-lock.json
+   npm install
+   npm run build
    ```
+
+### Stabil verziók
+
+A projekt most stabil verziókat használ:
+- React 18.2.0
+- Vite 4.4.0
+- React Router DOM 6.8.0
+
+Ezek a verziók nem rendelkeznek a Rollup platform-specifikus problémákkal.
 
 ### Firebase konfiguráció
 

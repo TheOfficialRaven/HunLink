@@ -25,4 +25,5 @@ if (process.env.NODE_ENV === 'development') {
   console.log('Development mód - Storage CORS kezelés aktív');
 }
 
-export const analytics = getAnalytics(app); 
+// Analytics csak böngésző környezetben inicializálása
+export const analytics = typeof window !== 'undefined' ? getAnalytics(app) : null; 
